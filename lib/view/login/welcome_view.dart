@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rg_foods/common/color_extension.dart';
+import 'package:rg_foods/common_widget/round_button.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -23,11 +25,39 @@ class _WelcomeViewState extends State<WelcomeView> {
               ),
               Image.asset(
                 "assets/images/app_logo.png",
-                width: size.width * 0.4,
-                // fit: BoxFit.cover,
+                width: size.width * 0.5,
+                height: size.width * 0.4,
+                fit: BoxFit.contain,
               ),
             ],
           ),
+          SizedBox(
+            height: size.width * 0.1,
+          ),
+          Text(
+            'Discover the best foods from over 1,000\nrestaurants and fast delivery to your \ndoorstep',
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Tcolor.secondaryText),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: size.width * 0.1,
+          ),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35),
+              child: RoundButton(onPressed: () {}, title: 'Login')),
+          SizedBox(
+            height: size.width * 0.1,
+          ),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35),
+              child: RoundButton(
+                onPressed: () {},
+                title: 'Create an Account',
+                type: RoundButtonType.textPrimary,
+              )),
         ],
       ),
     );

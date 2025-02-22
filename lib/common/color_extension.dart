@@ -6,4 +6,5 @@ class Tcolor {
   static Color get secondaryText => Color(0xff7C7D7E);
   static Color get textfield => Color(0xffF2F2f2);
   static Color get placeholder => Color(0xffB6B7B7);
+  static Color get white => Color(0xffffffff);
 }
