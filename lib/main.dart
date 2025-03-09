@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rg_foods/view/home/home_view.dart';
 import 'package:rg_foods/view/login/welcome_view.dart';
+import 'package:rg_foods/view/main_tab/maintab_view.dart';
+import 'package:rg_foods/view/onboarding_screens/onboarding_view.dart';
 import 'package:rg_foods/view/onboarding_screens/startup_view.dart';
 
 void main() {
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: "Metropolis",
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+          // useMaterial3: true,
         ),
         home: StartupView());
   }

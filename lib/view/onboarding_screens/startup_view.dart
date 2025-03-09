@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rg_foods/view/login/welcome_view.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class StartupView extends StatefulWidget {
   const StartupView({super.key});

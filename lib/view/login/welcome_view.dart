@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rg_foods/common/color_extension.dart';
 import 'package:rg_foods/common_widget/round_button.dart';
+import 'package:rg_foods/view/login/login_view.dart';
+import 'package:rg_foods/view/login/otp_view.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -47,14 +49,22 @@ class _WelcomeViewState extends State<WelcomeView> {
           ),
           Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35),
-              child: RoundButton(onPressed: () {}, title: 'Login')),
+              child: RoundButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginView()));
+                  },
+                  title: 'Login')),
           SizedBox(
             height: size.width * 0.1,
           ),
           Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35),
               child: RoundButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => OTPView()));
+                },
                 title: 'Create an Account',
                 type: RoundButtonType.textPrimary,
               )),
