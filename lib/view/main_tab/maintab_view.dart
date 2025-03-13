@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rg_foods/common/color_extension.dart';
 import 'package:rg_foods/common_widget/bottom_icon.dart';
 import 'package:rg_foods/view/home/home_view.dart';
+import 'package:rg_foods/view/menu/menu_view.dart';
 
 class MaintabView extends StatefulWidget {
   const MaintabView({super.key});
@@ -17,6 +18,7 @@ class _MaintabViewState extends State<MaintabView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xfffDfDfD),
       body: SafeArea(
           child: PageStorage(bucket: storageBucket, child: selectPage)),
@@ -29,6 +31,7 @@ class _MaintabViewState extends State<MaintabView> {
           onPressed: () {
             if (selectTab != 2) {
               selectTab = 2;
+              selectPage = HomeView();
             }
             if (mounted) {
               setState(() {});
@@ -58,7 +61,7 @@ class _MaintabViewState extends State<MaintabView> {
                 onTap: () {
                   if (selectTab != 0) {
                     selectTab = 0;
-                    selectPage = Container();
+                    selectPage = MenuView();
                   }
                   if (mounted) {
                     setState(() {});
