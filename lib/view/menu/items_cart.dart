@@ -329,7 +329,7 @@ class _ItemsCartState extends State<ItemsCart> {
                                   left: size.width * 0.09,
                                   child: Container(
                                     width: size.width * 0.77,
-                                    height: size.width * 0.31,
+                                    height: size.width * 0.34,
                                     decoration: BoxDecoration(
                                         color: Tcolor.white,
                                         borderRadius: BorderRadius.only(
@@ -364,43 +364,49 @@ class _ItemsCartState extends State<ItemsCart> {
                                             fontWeight: FontWeight.w900),
                                       ),
                                       SizedBox(height: 10),
-                                      Container(
-                                        height: 30,
-                                        width: 200,
-                                        margin: EdgeInsets.symmetric(
-                                            horizontal: 30),
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          color: Tcolor.primary,
-                                        ),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/shopping-cart.png",
-                                              width: 20,
-                                              height: 20,
-                                              color: Tcolor.white,
-                                            ),
-                                            SizedBox(width: 10),
-                                            Text(
-                                              "Add to Cart",
-                                              style: TextStyle(
-                                                  color: Tcolor.white,
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w600),
-                                            )
-                                          ],
+                                      InkWell(
+                                        onTap: () {
+                                          print("working");
+                                        },
+                                        child: Container(
+                                          height: 30,
+                                          width: 200,
+                                          margin: EdgeInsets.symmetric(
+                                              horizontal: 30),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: Tcolor.primary,
+                                          ),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                "assets/images/shopping-cart.png",
+                                                width: 20,
+                                                height: 20,
+                                                color: Tcolor.white,
+                                              ),
+                                              SizedBox(width: 10),
+                                              Text(
+                                                "Add to Cart",
+                                                style: TextStyle(
+                                                    color: Tcolor.white,
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       )
                                     ],
                                   ),
                                 ),
                                 Positioned(
-                                  right: 5,
-                                  top: 30,
+                                  right: size.width * 0.001,
+                                  top: size.width * 0.085,
                                   child: Container(
                                       width: 40,
                                       height: 40,
