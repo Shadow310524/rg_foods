@@ -12,44 +12,48 @@ class DessertsView extends StatefulWidget {
 
 class _DessertsViewState extends State<DessertsView> {
   final TextEditingController search_food = TextEditingController();
-List<Map<String, dynamic>> dessert_arr = [
-  {
-    "image": "assets/images/des1.png",
-    "name": "French Apple Pie",
-    "rate": "4.5",
-    "rating": "125",
-    "type": "Minute by Tuk Tuk",
-    "food_type": "Desserts",
-    "description": "A classic French-inspired apple pie with a rich, buttery crust and a warm cinnamon-spiced apple filling. Topped with a golden crumble for the perfect crunch, this comforting dessert pairs beautifully with a scoop of vanilla ice cream or a drizzle of caramel sauce."
-  },
-  {
-    "image": "assets/images/des2.png",
-    "name": "Dark Chocolate Cake",
-    "rate": "4.5",
-    "rating": "125",
-    "type": "Minute by Tuk Tuk",
-    "food_type": "Desserts",
-    "description": "A decadent, moist, and rich dark chocolate cake made from the finest cocoa. Layered with silky chocolate ganache and topped with a glossy glaze, this indulgent treat is perfect for true chocolate lovers who crave deep, intense flavors in every bite."
-  },
-  {
-    "image": "assets/images/des3.png",
-    "name": "Street Shake",
-    "rate": "4.5",
-    "rating": "125",
-    "type": "Minute by Tuk Tuk",
-    "food_type": "Desserts",
-    "description": "A refreshing, thick, and creamy milkshake that captures the vibrant flavors of street-style beverages. Blended with premium chocolates, fresh fruits, and crunchy nuts, then topped with whipped cream and drizzled with sweet syrups, this shake is pure indulgence in a glass."
-  },
-  {
-    "image": "assets/images/des4.png",
-    "name": "Fudgy Chewy Brownies",
-    "rate": "4.5",
-    "rating": "125",
-    "type": "Minute by Tuk Tuk",
-    "food_type": "Desserts",
-    "description": "Rich, gooey, and packed with intense chocolate flavor, these fudgy chewy brownies are a chocolate lover’s dream. Made with premium cocoa and real melted chocolate, each bite melts in your mouth with the perfect balance of chewiness and crisp edges."
-  },
-];
+  List<Map<String, dynamic>> dessert_arr = [
+    {
+      "image": "assets/images/des1.png",
+      "name": "French Apple Pie",
+      "rate": "4.5",
+      "rating": "125",
+      "type": "Minute by Tuk Tuk",
+      "food_type": "Desserts",
+      "description":
+          "A classic French-inspired apple pie with a rich, buttery crust and a warm cinnamon-spiced apple filling. Topped with a golden crumble for the perfect crunch, this comforting dessert pairs beautifully with a scoop of vanilla ice cream or a drizzle of caramel sauce."
+    },
+    {
+      "image": "assets/images/des2.png",
+      "name": "Dark Chocolate Cake",
+      "rate": "4.5",
+      "rating": "125",
+      "type": "Minute by Tuk Tuk",
+      "food_type": "Desserts",
+      "description":
+          "A decadent, moist, and rich dark chocolate cake made from the finest cocoa. Layered with silky chocolate ganache and topped with a glossy glaze, this indulgent treat is perfect for true chocolate lovers who crave deep, intense flavors in every bite."
+    },
+    {
+      "image": "assets/images/des3.png",
+      "name": "Street Shake",
+      "rate": "4.5",
+      "rating": "125",
+      "type": "Minute by Tuk Tuk",
+      "food_type": "Desserts",
+      "description":
+          "A refreshing, thick, and creamy milkshake that captures the vibrant flavors of street-style beverages. Blended with premium chocolates, fresh fruits, and crunchy nuts, then topped with whipped cream and drizzled with sweet syrups, this shake is pure indulgence in a glass."
+    },
+    {
+      "image": "assets/images/des4.png",
+      "name": "Fudgy Chewy Brownies",
+      "rate": "4.5",
+      "rating": "125",
+      "type": "Minute by Tuk Tuk",
+      "food_type": "Desserts",
+      "description":
+          "Rich, gooey, and packed with intense chocolate flavor, these fudgy chewy brownies are a chocolate lover’s dream. Made with premium cocoa and real melted chocolate, each bite melts in your mouth with the perfect balance of chewiness and crisp edges."
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +82,7 @@ List<Map<String, dynamic>> dessert_arr = [
                             fontSize: 24,
                             fontWeight: FontWeight.w600,
                             color: Tcolor.primaryText)),
-                    SizedBox(width: size.width * 0.443),
+                    SizedBox(width: size.width * 0.430),
                     IconButton(
                       onPressed: () {},
                       icon: Image.asset(
@@ -122,9 +126,9 @@ List<Map<String, dynamic>> dessert_arr = [
                                 builder: (context) => ItemsCart(
                                     imageUrl: dessert_data["image"],
                                     name: dessert_data["name"],
-                                    star:double.parse(dessert_data["rate"]),
-                                    description:dessert_data["description"]
-                                    )));                      },
+                                    star: double.parse(dessert_data["rate"]),
+                                    description: dessert_data["description"])));
+                      },
                       child: Container(
                         margin: EdgeInsets.only(bottom: 5),
                         child: Stack(

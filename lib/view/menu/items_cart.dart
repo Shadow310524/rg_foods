@@ -27,6 +27,8 @@ class _ItemsCartState extends State<ItemsCart> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     print(widget.star);
+    print(size.width);
+    print(171 / size.width);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -210,20 +212,21 @@ class _ItemsCartState extends State<ItemsCart> {
                             ),
                             SizedBox(height: 20),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
                                   "Number of Portions",
                                   style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w700),
                                 ),
-                                SizedBox(
-                                  width: 10,
-                                ),
+                                // SizedBox(
+                                //   width: 10,
+                                // ),
+                                Spacer(),
                                 InkWell(
                                   onTap: () {
-                                    if (qty > 0) {
+                                    if (qty > 1) {
                                       setState(() {
                                         qty--;
                                       });
@@ -248,16 +251,20 @@ class _ItemsCartState extends State<ItemsCart> {
                                   width: 10,
                                 ),
                                 Container(
-                                  width: 40,
+                                  padding: EdgeInsets.symmetric(horizontal: 15),
+                                  // width: 40,
                                   height: 20,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Tcolor.primary),
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Tcolor.white,
+                                      border: Border.all(
+                                          color: Tcolor.primary, width: 1)),
+                                  alignment: Alignment.center,
                                   child: Text(
                                     "$qty",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        color: Tcolor.white,
+                                        color: Tcolor.primary,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ),
@@ -285,9 +292,79 @@ class _ItemsCartState extends State<ItemsCart> {
                                           fontWeight: FontWeight.w600),
                                     ),
                                   ),
-                                )
+                                ),
                               ],
                             ),
+                            SizedBox(height: 20),
+                            Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(
+                                      top: 8, bottom: 8, right: 20),
+                                  width: size.width * 0.86,
+                                  height: size.width * 0.41,
+                                  decoration: BoxDecoration(
+                                      color: Tcolor.white,
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(50),
+                                        topRight: Radius.circular(25),
+                                        bottomLeft: Radius.circular(10),
+                                        bottomRight: Radius.circular(50),
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            blurRadius: 8,
+                                            color: Colors.black12,
+                                            offset: Offset(0, 4))
+                                      ]),
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Total Price",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Text(
+                                      "Rs.${qty * 750}",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    // ElevatedButton(onPressed: (){}, child: child)
+                                  ],
+                                ),
+                                Positioned(
+                                  right: 5,
+                                  top: 70,
+                                  child: Container(
+                                      width: 40,
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                          color: Tcolor.white,
+                                          borderRadius:
+                                              BorderRadius.circular(25),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                blurRadius: 4,
+                                                color: Colors.black12,
+                                                offset: Offset(0, 2))
+                                          ]),
+                                      child: IconButton(
+                                        onPressed: () {},
+                                        icon: Image.asset(
+                                          "assets/images/shopping-cart.png",
+                                          width: 25,
+                                          height: 25,
+                                          color: Tcolor.primary,
+                                        ),
+                                      )),
+                                )
+                              ],
+                            )
                           ],
                         ),
                       )
