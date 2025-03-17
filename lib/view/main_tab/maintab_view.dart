@@ -3,6 +3,9 @@ import 'package:rg_foods/common/color_extension.dart';
 import 'package:rg_foods/common_widget/bottom_icon.dart';
 import 'package:rg_foods/view/home/home_view.dart';
 import 'package:rg_foods/view/menu/menu_view.dart';
+import 'package:rg_foods/view/more/more_view.dart';
+import 'package:rg_foods/view/offers/offer_view.dart';
+import 'package:rg_foods/view/profile/profile_view.dart';
 
 class MaintabView extends StatefulWidget {
   const MaintabView({super.key});
@@ -75,7 +78,7 @@ class _MaintabViewState extends State<MaintabView> {
                 onTap: () {
                   if (selectTab != 1) {
                     selectTab = 1;
-                    selectPage = Container();
+                    selectPage = OfferView();
                   }
                   if (mounted) {
                     setState(() {});
@@ -89,7 +92,7 @@ class _MaintabViewState extends State<MaintabView> {
                 onTap: () {
                   if (selectTab != 3) {
                     selectTab = 3;
-                    selectPage = Container();
+                    selectPage = ProfileView();
                   }
                   if (mounted) {
                     setState(() {});
@@ -103,7 +106,7 @@ class _MaintabViewState extends State<MaintabView> {
                 onTap: () {
                   if (selectTab != 4) {
                     selectTab = 4;
-                    selectPage = Container();
+                    selectPage = MoreView();
                   }
                   if (mounted) {
                     setState(() {});

@@ -60,13 +60,7 @@ class RecentItems extends StatelessWidget {
                                   fontWeight: FontWeight.w500),
                             ),
                             SizedBox(width: 10),
-                            Text(
-                              ".",
-                              style: TextStyle(
-                                  color: Tcolor.primary,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w800),
-                            ),
+                            Icon(Icons.circle, size: 5, color: Tcolor.primary),
                             SizedBox(width: 10),
                             Text(
                               mostpopular["food_type"]!,

@@ -452,18 +452,25 @@ class _ItemsCartState extends State<ItemsCart> {
                   ),
                 ),
                 Positioned(
-                    top: size.width - 50,
-                    left: size.width * 0.88,
-                    child: GestureDetector(
-                      onTap: () {
+                    top: size.width * 0.8,
+                    left: size.width * 0.75,
+                    child: IconButton(
+                      onPressed: () {
                         setState(() {
                           isFavourite = !isFavourite;
                         });
                       },
-                      child: (Icon(
-                        Icons.favorite,
-                        color: isFavourite ? Tcolor.primary : Colors.grey,
-                      )),
+                      icon: isFavourite
+                          ? Image.asset(
+                              "assets/images/favorites_btn.png",
+                              height: 80,
+                              width: 80,
+                            )
+                          : Image.asset(
+                              "assets/images/favorites_btn_2.png",
+                              height: 80,
+                              width: 80,
+                            ),
                     )),
                 Positioned(
                   top: 30,

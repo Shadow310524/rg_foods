@@ -77,6 +77,8 @@ class PopularRestaurant extends StatelessWidget {
                               fontWeight: FontWeight.w500),
                         ),
                         SizedBox(width: 10),
+                        Icon(Icons.circle, size: 5, color: Tcolor.primary),
+                        SizedBox(width: 10),
                         Text(
                           popular_resturant["food_type"]!,
                           style: TextStyle(
